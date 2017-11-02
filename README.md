@@ -20,10 +20,10 @@ Simple universal class for using Curl library
 `$curl->post(['name'=>'value'])->execute('http://domen.com');`
 
 ### If you want use HEADERS in request
-`$curl->header([''Content-type: application/x-www-form-urlencoded'])->post(['name'=>'value'])->execute('http://domain.com');`
+`$curl->header(['Content-type: application/x-www-form-urlencoded'])->post(['name'=>'value'])->execute('http://domain.com');`
 
 ### If you want use HTTP Authetication
-`$curl->auth_http()->execute('http://domain.com);`
+`$curl->auth_http('login:password')->execute('http://domain.com);`
 
 ### If you want use Authetication whith Cookie
-`$curl->auth->execute('http://domain.com');`
+`$curl->auth($auth_post_data, $cookie_file)->execute('http://domain.com');`

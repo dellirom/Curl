@@ -22,13 +22,11 @@ class Curl
      * Curl constructor. Curl init.
      * @param bool $display
      */
-    public function __construct($display = false)
+    public function __construct()
     {
         $this->ch = curl_init();
         curl_setopt($this->ch, CURLOPT_USERAGENT, $this->user_agent);
-        if (!$display){
-            curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
-        }
+        curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
     }
 
     /**

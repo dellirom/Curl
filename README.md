@@ -27,3 +27,6 @@ Simple universal class for using Curl library
 
 ### If you want use Authetication whith Cookie
 `$curl->auth($auth_post_data, $cookie_file)->execute('http://domain.com');`
+
+### If you want now response HTTP code. Use after CURL execute.
+`$curl->getCode();`

@@ -55,14 +55,14 @@ class Curl
 
     /**
      * @param $data
-     * @param $cookie
+     * @param $cookie_file
      * @return $this
      */
-    public function auth($data, $cookie)
+    public function auth($data, $cookie_file)
     {
         $this->post($data);
-        $this->set(CURLOPT_COOKIEJAR, $cookie);
-        $this->set(CURLOPT_COOKIEFILE, $cookie);
+        $this->set(CURLOPT_COOKIEJAR, $cookie_file);
+        $this->set(CURLOPT_COOKIEFILE, $cookie_file);
         return $this;
     }
 
